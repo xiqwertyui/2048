@@ -238,7 +238,7 @@ void printMap(int map[MAP_SIZE][MAP_SIZE], bool printPrettyEnable,
       if (printPrettyEnable) {
         switch (map[i][j]) {
           case 0:
-            printf("%*s ", MAX_DIGIT, "(x)");
+            printf("%*s ", MAX_DIGIT, "X");
             break;
           case 2:
             printf("%*s ", MAX_DIGIT, "<2>");
@@ -281,7 +281,7 @@ void printMap(int map[MAP_SIZE][MAP_SIZE], bool printPrettyEnable,
       } else {
         switch (map[i][j]) {
           case 0:
-            printf("%*s ", MAX_DIGIT, "(x)");
+            printf("%*s ", MAX_DIGIT, "X");
             break;
           default:
             printf("%*d ", MAX_DIGIT, map[i][j]);

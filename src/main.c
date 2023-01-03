@@ -76,6 +76,8 @@ int main(int argc, char **argv) {
           printf("ERROR!!\n");
           break;
       }
+      printf("\nPress any key to exit\n");
+      getchar();
       exit(0);
     }
     printf("<Next turn>==================================\n");

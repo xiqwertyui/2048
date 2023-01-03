@@ -37,7 +37,7 @@ int main(int argc, char **argv) {
     }
   }
   printf("<Game start>==================================\n");
-  for (initMap(map); gameStat(map) == CONTINUE;) {
+  for (initMap(map); true;) {
     printMap(map);
     printf("Input accepting (w|a|s|d): ");
     if (scanf(" %c", &command) == EOF) {
@@ -64,23 +64,24 @@ int main(int argc, char **argv) {
     }
     printf("Result:\n");
     printMap(map);
+    if (gameStat(map) != CONTINUE) {
+      switch (gameStat(map)) {
+        case WIN:
+          printf("YOU WIN!!\n");
+          break;
+        case LOSE:
+          printf("YOU LOSE!!\n");
+          break;
+        default:
+          printf("ERROR!!\n");
+          break;
+      }
+      exit(0);
+    }
     printf("<Next turn>==================================\n");
     if (moved) {  // 如果地图发生变化，随机加入一个2或者4
       randomAdd(map);
     }
   }
-  switch (gameStat(map)) {
-    case WIN:
-      printf("YOU WIN!!\n");
-      printMap(map);
-      break;
-    case LOSE:
-      printf("YOU LOSE!!\n");
-      printMap(map);
-      break;
-    default:
-      printf("ERROR!!\n");
-      printMap(map);
-      break;
-  }
+  
 }

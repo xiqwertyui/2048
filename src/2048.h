@@ -5,11 +5,7 @@
 
 #include <stdbool.h>
 
-
-#define MAP_AUTOMATIC_CLEAR_ENABLE true
-
-
-#define MAX_DIGIT 8 // 2048 is 4 digit, you'd better set here greater than 4
+#define MAX_DIGIT 8  // 2048 is 4 digit, you'd better set here greater than 4
 
 #define UP 'w'
 #define LEFT 'a'
@@ -23,20 +19,20 @@
 #define MAP_SIZE 4
 #define RANDOM_ADD_4_CHANCE 0.1
 
+void clear(bool clearEnable);
+void initMap(int map[MAP_SIZE][MAP_SIZE]);
+void printMap(int map[MAP_SIZE][MAP_SIZE], bool printPrettyEnable,
+              bool clearEnable);
+void randomAdd(int map[MAP_SIZE][MAP_SIZE]);
 
-void clear(bool clearEnable); 
-void initMap(int map[MAP_SIZE][MAP_SIZE]);  
-void printMap(int map[MAP_SIZE][MAP_SIZE], bool printPrettyEnable, bool clearEnable); 
-void randomAdd(int map[MAP_SIZE][MAP_SIZE]); 
-
-//朝4个方位移动的操作函数
+// 朝4个方位移动的操作函数
 int W(int map[MAP_SIZE][MAP_SIZE]);
 int A(int map[MAP_SIZE][MAP_SIZE]);
 int S(int map[MAP_SIZE][MAP_SIZE]);
 int D(int map[MAP_SIZE][MAP_SIZE]);
 
-bool isFullMap(int map[MAP_SIZE][MAP_SIZE]); 
+bool isFullMap(int map[MAP_SIZE][MAP_SIZE]);
 
-int gameStat(int map[MAP_SIZE][MAP_SIZE]); 
+int gameStat(int map[MAP_SIZE][MAP_SIZE]);
 
 #endif

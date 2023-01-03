@@ -197,7 +197,7 @@ void randomAdd(int map[MAP_SIZE][MAP_SIZE]) {
   map[r][c] = n;
 }
 
-// 清空屏幕，是否启用由MAP_AUTOMATIC_CLEAR_ENABLE决定
+// 清空屏幕
 void clear(bool clearEnable) {
   if (clearEnable) {
     system("cls");

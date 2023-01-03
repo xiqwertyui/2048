@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <unistd.h>
 
 #include "2048.h"
 
@@ -21,6 +22,17 @@ void usage(void) {
   printf("-1, log -> log every step when gamming\n");
   printf("-p, pretty -> make the output pretty\n");
   printf("--help, help -> usage\n");
+}
+
+void delay(int number_of_seconds) {  //reference: https://www.geeksforgeeks.org/time-delay-c/
+  // Converting time into milli_seconds
+  int milli_seconds = 1000 * number_of_seconds;
+
+  // Storing start time
+  clock_t start_time = clock();
+
+  // looping till required time is not achieved
+  while (clock() < start_time + milli_seconds);
 }
 
 int main(int argc, char **argv) {
@@ -76,8 +88,8 @@ int main(int argc, char **argv) {
           printf("ERROR!!\n");
           break;
       }
-      printf("\nPress any key to exit\n");
-      getchar();
+      printf("This C program will exit in 10 seconds.\n");
+      delay(10);
       exit(0);
     }
     printf("<Next turn>==================================\n");
@@ -85,5 +97,4 @@ int main(int argc, char **argv) {
       randomAdd(map);
     }
   }
-  
 }

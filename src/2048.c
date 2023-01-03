@@ -238,43 +238,43 @@ void printMap(int map[MAP_SIZE][MAP_SIZE], bool printPrettyEnable,
       if (printPrettyEnable) {
         switch (map[i][j]) {
           case 0:
-            printf("%*s ", MAX_DIGIT, "X");
+            printf("%*s ", PRETTY_MAX_DIGIT, "X");
             break;
           case 2:
-            printf("%*s ", MAX_DIGIT, "<2>");
+            printf("%*s ", PRETTY_MAX_DIGIT, "<2>");
             break;
           case 4:
-            printf("%*s ", MAX_DIGIT, ">4<");
+            printf("%*s ", PRETTY_MAX_DIGIT, ">4<");
             break;
           case 8:
-            printf("%*s ", MAX_DIGIT, "!8!");
+            printf("%*s ", PRETTY_MAX_DIGIT, "!8!");
             break;
           case 16:
-            printf("%*s ", MAX_DIGIT, "|16|");
+            printf("%*s ", PRETTY_MAX_DIGIT, "|16|");
             break;
           case 32:
-            printf("%*s ", MAX_DIGIT, "{32}");
+            printf("%*s ", PRETTY_MAX_DIGIT, "{32}");
             break;
           case 64:
-            printf("%*s ", MAX_DIGIT, "[64]");
+            printf("%*s ", PRETTY_MAX_DIGIT, "[64]");
             break;
           case 128:
-            printf("%*s ", MAX_DIGIT, "#128#");
+            printf("%*s ", PRETTY_MAX_DIGIT, "#128#");
             break;
           case 256:
-            printf("%*s ", MAX_DIGIT, "^256^");
+            printf("%*s ", PRETTY_MAX_DIGIT, "^256^");
             break;
           case 512:
-            printf("%*s ", MAX_DIGIT, "&512&");
+            printf("%*s ", PRETTY_MAX_DIGIT, "&512&");
             break;
           case 1024:
-            printf("%*s ", MAX_DIGIT, ">>>1024<<<");
+            printf("%*s ", PRETTY_MAX_DIGIT, ">>>1024<<<");
             break;
           case 2048:
-            printf("%*s ", MAX_DIGIT, "!!!2048!!!");
+            printf("%*s ", PRETTY_MAX_DIGIT, "!!!2048!!!");
             break;
           default:
-            printf("%*s ", MAX_DIGIT, "?");
+            printf("%*s ", PRETTY_MAX_DIGIT, "?");
             break;
         }
 

@@ -6,6 +6,7 @@
 #include <stdbool.h>
 
 #define MAX_DIGIT 4  // 2048 is 4 digit, you'd better set here greater than 4
+#define PRETTY_MAX_DIGIT 6
 
 #define UP 'w'
 #define LEFT 'a'

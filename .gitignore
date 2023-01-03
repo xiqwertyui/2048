@@ -387,3 +387,6 @@ $RECYCLE.BIN/
 
 # Vscode configeration directory
 .vscode/
+
+#cloudSync small executable file
+cloudSync.exe

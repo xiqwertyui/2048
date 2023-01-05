@@ -1,5 +1,5 @@
 ## ABOUT
-  - This is a 2048 Game implemented by using C language
+  - This is a 2048 Game implemented by using C language, it's a **command line game**
   - https://en.wikipedia.org/wiki/2048_(video_game)
 
 ## HOW TO PLAY!
